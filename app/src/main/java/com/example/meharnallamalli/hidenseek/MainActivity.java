@@ -49,6 +49,13 @@ public class MainActivity extends Activity {
 
         mPref = getApplicationContext().getSharedPreferences(PREF, 0);
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
         findViewById(R.id.btnSettings).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +79,12 @@ public class MainActivity extends Activity {
         findViewById(R.id.pairButton).setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v){
+<<<<<<< HEAD
                 Intent i = new Intent(MainActivity.this, ScanActivity.class);
+=======
+
+                Intent i = new Intent(MainActivity.this, RSSIActivity.class);
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
                 startActivity(i);
             }
 

@@ -73,6 +73,10 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
 
         if(!inParty) {
             holder.cv.setOnClickListener(new View.OnClickListener() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
                 @Override
                 public void onClick(View v) {
                     Log.d(TAG, "Device onClick at" + position);
@@ -80,16 +84,29 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
                         holder.cv.setCardBackgroundColor(Color.GRAY);
                         device.select();
                     } else if (device.selected) {
+<<<<<<< HEAD
                         //unchecked.
                         holder.cv.setCardBackgroundColor(Color.WHITE);
                         device.deselect();
                     }
                 }
+=======
+                        holder.cv.setCardBackgroundColor(Color.WHITE);
+                        device.deselect();
+                        //unchecked.
+                    }
+                }
+
+
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
             });
         }else{
             holder.cv.setCardBackgroundColor(Color.WHITE);
             vibrate();
+<<<<<<< HEAD
             setCardViewColor(holder, device);
+=======
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
         }
     }
 
@@ -107,6 +124,7 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
             return scaled;
         }
 
+<<<<<<< HEAD
         return scaled;
     }
 
@@ -122,10 +140,18 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
                 holder.cv.setCardBackgroundColor(Color.BLACK);
             }
         }
+=======
+
+        return scaled;
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
     }
 
 
     private String getPartySignals(Device device) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
         String signalStrength = "";
         if (device.rssiStrength >= -50) {
             signalStrength = "Strong vibes";
@@ -141,17 +167,27 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
     public void vibrate() {
         Vibrator v = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
         if(deviceList.size() > 0) {
+<<<<<<< HEAD
             //only vibrate for the closest device, so logic for getting closest device
+=======
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
             Device closestDevice = deviceList.get(0);
             for (Device device : deviceList) {
                 if (device.rssiStrength > closestDevice.rssiStrength) {
                     closestDevice = device;
                 }
             }
+<<<<<<< HEAD
 
             if (closestDevice.rssiStrength >= -50) {
                 // 0 : Start without a delay
@@ -168,6 +204,16 @@ public class RSSIListAdapter extends RecyclerView.Adapter<RSSIListAdapter.Device
             } else if (closestDevice.rssiStrength < -90) {
                 long[] mVibratePattern = new long[]{0, 400, 6000, 400};
                 v.vibrate(mVibratePattern, -1);
+=======
+            if (closestDevice.rssiStrength >= -50) {
+                v.vibrate(new long[]{0, 500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170, 40, 500}, -1);
+            } else if (closestDevice.rssiStrength < -50 && closestDevice.rssiStrength >= -80){
+                v.vibrate(4000);
+            } else if (closestDevice.rssiStrength < -80 && closestDevice.rssiStrength >= -90) {
+                v.vibrate(3000);
+            } else if (closestDevice.rssiStrength < -90) {
+                v.vibrate(2000);
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
             }
         }
     }

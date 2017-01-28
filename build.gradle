@@ -3,10 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+<<<<<<< HEAD
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
+=======
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
@@ -19,10 +22,13 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+<<<<<<< HEAD
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
+=======
+>>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
     }
 }
 
