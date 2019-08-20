@@ -37,14 +37,12 @@
             android:name=".RSSIActivity"
             android:label="RSSI" >
         </activity>
-<<<<<<< HEAD
 
         <activity
             android:name=".ScanActivity"
             android:label="SCAN" >
         </activity>
-=======
->>>>>>> ce0b680... card view updated. scaled RSSI values from scale of 0-100.
+
     </application>
 
 </manifest>
